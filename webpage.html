@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>WEBPAGE</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+.container {
+    background-color: grey;
+    height: 900px;
+    width: 50%;
+    margin: auto;
+}
+.a{
+   height:700px;
+   width:90%;
+   margin:auto;
+   }
+.blink {
+    color: black;
+    font-size: 30px;
+	text-align:center;
+}
+.p {
+    color: white;
+    font-size: 20px;
+}
+.h2{
+ font-size: 25px;
+ }
+.pri{
+ text-align:center;
+ }
+button#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+</style>
+<body>
+<div class="container">
+<div class="a">
+
+<h2 class="blink">MUSIC:</h2>
+<p class="p">Music is generally defined as the art of arranging sound to create some combination of form, harmony, melody, rhythm or otherwise expressive content.Exact definitions of music vary considerably around the world,though it is an aspect of all human societies, a cultural universal.Music is a collection of coordinated sound or sounds. Making music is the process of putting sounds and tones in an order, often combining them to create a unified composition. People who make music creatively organize sounds for a desired result, like a Beethoven symphony or one of Duke Ellington's jazz songs.</p><br>
+<h3 class="h2">Why music is important in life?</h3>
+<p class="p">Music can raise someone's mood, get them excited, or make them calm and relaxed. Music also - and this is important - allows us to feel nearly or possibly all emotions that we experience in our lives.Art and music are basic human functions. Humankind and art cannot function without one another. We have the burning desire to create, whatever it may be and however tiny or grand. The interaction with sound is unavoidable, either to make it or take pleasure in it. People have always found music significant in their lives, whether for enjoyment in listening, the emotional response, performing, or creating.</p><br>
+<h3 class="h2">What is purpose of music?</h3>
+<p class="p"> Music’s purpose is to express and modulate emotion. Music’s primary use is mood control. We sing lullabies to soothe babies – which works very well when language fails. Here in LA, as well as other traffic-congested cities, we rely heavily on the local radio stations to uplift our spirits and dissipate our stress as we stop-and-go along the freeway. In trendy hotels, you bet there is a soundtrack rolling so that every person who walks through the lobby feels like the movie star they are in their mind.</p><br>
+
+</div>
+</div>
+<div class="pri">
+<input id="box" type="checkbox">
+<button  id="button"  disabled onclick="window.print()">Print this page</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top <i class="fa-solid fa-arrow-up"></i></button>
+</div>
+
+
+<script>
+function blink_text() {
+    $('.blink').fadeOut(500);
+    $('.blink').fadeIn(500);
+}
+setInterval(blink_text, 1000);
+
+$("#box").click(function() {
+  $("#button").attr("disabled", !this.checked);
+});
+
+var mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 2|| document.documentElement.scrollTop > 2) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</script> 
+
+
+</body>
+
+</html>
